@@ -1,4 +1,4 @@
-package ag_mergeSort;
+package ba_mergeSort;
 
 public class Test {
     public static void main(String[] args) {
