@@ -63,7 +63,7 @@ public class Test {
         return ans;
     }
 
-    public static int divide(int a, int b) {
+    public static int div(int a, int b) {
         int x = a < 0 ? neg(a) : a;
         int y = b < 0 ? neg(b) : b;
         int ans = 0;
@@ -74,5 +74,24 @@ public class Test {
             }
         }
         return a < 0 ^ b < 0 ? neg(ans) : ans;
+    }
+
+    public static int divide(int a, int b) {
+        if (a == Integer.MIN_VALUE && b == Integer.MIN_VALUE) {//a、b都是整型最小
+            return 1;
+        }
+        if (a != Integer.MIN_VALUE && b != Integer.MIN_VALUE) {//a、b都不是整型最小，正常除
+            return div(a, b);
+        }
+        if (b == Integer.MIN_VALUE) {//b是整型最小
+            return 0;
+        }
+        if (b == neg(1)) {//a是整型最小，b是-1，返回整型最大（题目中说的）
+            return Integer.MAX_VALUE;
+        }
+        a = add(a, b > 0 ? b : neg(b));
+        int ans = div(a, b);
+        int offset = b > 0 ? neg(1) : 1;
+        return add(ans, offset);
     }
 }
