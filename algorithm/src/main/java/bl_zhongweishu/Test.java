@@ -6,6 +6,9 @@ public class Test {
     public static void main(String[] args) {
     }
 
+    /**
+     * 获取一个流的中位数
+     */
     public static class MedianFinder {
         private PriorityQueue<Integer> maxHeap;//大根堆
         private PriorityQueue<Integer> minHeap;//小根堆
