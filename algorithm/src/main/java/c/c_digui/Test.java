@@ -8,7 +8,7 @@ public class Test {
     }
 
     /**
-     * 生成字符串的所有子序列（序列是不能颠倒顺序的）
+     * 生成字符串的所有子序列（序列是不能颠倒顺序的），时间复杂度是O(2^n * n)
      *
      * @param str
      * @return
@@ -64,7 +64,7 @@ public class Test {
     }
 
     /**
-     * 数组的全部子集组合
+     * 数组的全部子集组合，时间复杂度是O(2^n * n)
      *
      * @param nums
      * @return
@@ -101,7 +101,7 @@ public class Test {
     }
 
     /**
-     * 数组没有重复的值，返回数组的全部排列
+     * 数组没有重复的值，返回数组的全部排列，时间复杂度是O(n! * n)
      *
      * @param nums
      * @return
@@ -135,7 +135,7 @@ public class Test {
     }
 
     /**
-     * 数组有重复的值，返回全部的排列，要去重
+     * 数组有重复的值，返回全部的排列，要去重，时间复杂度是O(n! * n)
      *
      * @param nums
      * @return
